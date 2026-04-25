@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Azhar Alam — Bariatric & Laparoscopic Surgeon, Lahore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ─── CSS Variables ─── */
+    :root {
+      --navy: #0A1628;
+      --navy-mid: #112240;
+      --navy-light: #1a3a6b;
+      --gold: #C9A84C;
+      --gold-light: #E8C97A;
+      --gold-pale: #F5E6C0;
+      --white: #FFFFFF;
+      --off-white: #F8F6F1;
+      --text-dark: #0D1B2A;
+      --text-muted: #5C6B7A;
+      --radius: 14px;
+      --shadow: 0 8px 40px rgba(10, 22, 40, 0.13);
+      --shadow-lg: 0 20px 70px rgba(10, 22, 40, 0.22);
+      --transition: 0.35s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    /* ─── Reset ─── */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ─── Utility ─── */
+    .urdu {
+      font-family: 'Noto Nastaliq Urdu', serif;
+      direction: rtl;
+      text-align: right;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201, 168, 76, .1);
+      border: 1px solid rgba(201, 168, 76, .3);
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 18px;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: .97rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 560px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 30px;
+      border-radius: 50px;
+      font-family: 'Poppins', sans-serif;
+      font-size: .9rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: var(--transition);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+
+    .btn-gold:hover {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(201, 168, 76, .4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255, 255, 255, .5);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, .1);
+      border-color: var(--white);
+    }
+
+    /* ─── Scroll Reveal ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-36px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(36px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .delay-1 {
+      transition-delay: .1s !important;
+    }
+
+    .delay-2 {
+      transition-delay: .2s !important;
+    }
+
+    .delay-3 {
+      transition-delay: .3s !important;
+    }
+
+    .delay-4 {
+      transition-delay: .4s !important;
+    }
+
+    .delay-5 {
+      transition-delay: .5s !important;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 0 24px;
+      transition: background var(--transition), box-shadow var(--transition);
+    }
+
+    nav.scrolled {
+      background: rgba(10, 22, 40, .96);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 2px 30px rgba(0, 0, 0, .3);
+    }
+
+    .nav-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .nav-logo-text {
+      line-height: 1.2;
+    }
+
+    .nav-logo-text strong {
+      display: block;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .nav-logo-text span {
+      font-size: .72rem;
+      color: var(--gold-light);
+      letter-spacing: .04em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a {
+      font-size: .84rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, .75);
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: color var(--transition), background var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+      background: rgba(255, 255, 255, .07);
+    }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy) !important;
+      font-weight: 600 !important;
+      border-radius: 50px !important;
+      padding: 9px 22px !important;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(201, 168, 76, .4);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold)) !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: var(--navy);
+      padding: 20px 24px 28px;
+      z-index: 999;
+      border-top: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 0;
+      font-size: .95rem;
+      color: rgba(255, 255, 255, .85);
+      border-bottom: 1px solid rgba(255, 255, 255, .06);
+    }
+
+    .mobile-menu a:last-child {
+      border: none;
+    }
+
+    /* ─── HERO ─── */
+    #hero {
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse at 70% 50%, rgba(201, 168, 76, .12) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 80%, rgba(26, 58, 107, .5) 0%, transparent 55%),
+        linear-gradient(145deg, #0A1628 0%, #112240 55%, #0E2050 100%);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid-lines {
+      position: absolute;
+      inset: 0;
+      opacity: .04;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 1) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    .hero-orb-1 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(201, 168, 76, .18) 0%, transparent 70%);
+      right: -100px;
+      top: -100px;
+    }
+
+    .hero-orb-2 {
+      width: 350px;
+      height: 350px;
+      background: radial-gradient(circle, rgba(26, 58, 107, .6) 0%, transparent 70%);
+      left: -50px;
+      bottom: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 100px 24px 60px;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201, 168, 76, .15);
+      border: 1px solid rgba(201, 168, 76, .35);
+      color: var(--gold-light);
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      border-radius: 50px;
+      margin-bottom: 22px;
+    }
+
+    .hero-badge i {
+      font-size: .7rem;
+    }
+
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .hero-name span {
+      color: var(--gold-light);
+    }
+
+    .hero-title {
+      font-size: clamp(.9rem, 2vw, 1.05rem);
+      font-weight: 400;
+      color: rgba(255, 255, 255, .65);
+      letter-spacing: .04em;
+      margin-bottom: 24px;
+    }
+
+    .hero-tagline-en {
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      font-weight: 500;
+      color: var(--white);
+      line-height: 1.55;
+      margin-bottom: 10px;
+    }
+
+    .hero-tagline-ur {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--gold-pale);
+      line-height: 1.9;
+      margin-bottom: 30px;
+    }
+
+    .hero-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .12);
+      padding: 10px 20px;
+      border-radius: 50px;
+      margin-bottom: 34px;
+    }
+
+    .hero-stars {
+      color: var(--gold);
+      font-size: .95rem;
+      letter-spacing: 2px;
+    }
+
+    .hero-rating-text {
+      font-size: .85rem;
+      color: rgba(255, 255, 255, .75);
+    }
+
+    .hero-rating-text strong {
+      color: var(--white);
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    /* Hero card */
+    .hero-card {
+      background: rgba(255, 255, 255, .06);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 24px;
+      padding: 36px 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+    }
+
+    .hc-avatar {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      color: var(--navy);
+      font-weight: 700;
+      margin: 0 auto 20px;
+      font-family: 'Playfair Display', serif;
+      box-shadow: 0 0 0 6px rgba(201, 168, 76, .2);
+    }
+
+    .hc-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      text-align: center;
+      margin-bottom: 4px;
+    }
+
+    .hc-spec {
+      font-size: .78rem;
+      color: var(--gold-light);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 24px;
+    }
+
+    .hc-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255, 255, 255, .1);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .hc-stat {
+      background: rgba(255, 255, 255, .04);
+      padding: 14px 8px;
+      text-align: center;
+    }
+
+    .hc-stat strong {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1.2;
+    }
+
+    .hc-stat span {
+      font-size: .7rem;
+      color: rgba(255, 255, 255, .55);
+    }
+
+    .hc-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      justify-content: center;
+    }
+
+    .hc-tag {
+      font-size: .72rem;
+      padding: 4px 12px;
+      border-radius: 50px;
+      background: rgba(201, 168, 76, .12);
+      border: 1px solid rgba(201, 168, 76, .25);
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    /* ─── ABOUT ─── */
+    #about {
+      padding: 100px 0;
+      background: var(--off-white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .about-img-bg {
+      width: 340px;
+      height: 420px;
+      border-radius: 24px;
+      background: linear-gradient(145deg, var(--navy), var(--navy-light));
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-img-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(201, 168, 76, .25) 0%, transparent 55%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='1' fill='rgba(255,255,255,0.08)'/%3E%3C/svg%3E");
+    }
+
+    .about-img-icon {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .about-img-icon i {
+      font-size: 4rem;
+      color: var(--gold-light);
+      opacity: .5;
+    }
+
+    .about-img-icon p {
+      font-size: .85rem;
+      color: rgba(255, 255, 255, .4);
+    }
+
+    .about-badge-float {
+      position: absolute;
+      bottom: 30px;
+      right: -20px;
+      background: var(--white);
+      border-radius: 14px;
+      padding: 14px 18px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, .12);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .abf-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-size: 1.1rem;
+    }
+
+    .abf-text strong {
+      display: block;
+      font-size: .9rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .abf-text span {
+      font-size: .72rem;
+      color: var(--text-muted);
+    }
+
+    .about-text .section-sub {
+      margin-bottom: 30px;
+    }
+
+    .specialty-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .specialty-card {
+      background: var(--white);
+      border: 1px solid rgba(10, 22, 40, .07);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      transition: var(--transition);
+      cursor: default;
+    }
+
+    .specialty-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 6px 24px rgba(201, 168, 76, .15);
+      transform: translateY(-3px);
+    }
+
+    .sc-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      font-size: 1rem;
+    }
+
+    .specialty-card:hover .sc-icon {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy);
+    }
+
+    .sc-text strong {
+      display: block;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    .sc-text span {
+      font-size: .75rem;
+      color: var(--text-muted);
+    }
+
+    /* ─── WHY CHOOSE ─── */
+    #why {
+      padding: 100px 0;
+      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #why::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: .04;
+      background:
+        radial-gradient(circle at 80% 20%, var(--gold) 0%, transparent 35%),
+        radial-gradient(circle at 15% 80%, var(--gold-light) 0%, transparent 30%);
+    }
+
+    .why-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .why-header .section-title {
+      color: var(--white);
+    }
+
+    .why-header .section-sub {
+      color: rgba(255, 255, 255, .55);
+      margin: 0 auto;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .why-card {
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid rgba(255, 255, 255, .09);
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform: scaleX(0);
+      transition: var(--transition);
+      transform-origin: left;
+    }
+
+    .why-card:hover {
+      background: rgba(255, 255, 255, .09);
+      transform: translateY(-6px);
+    }
+
+    .why-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .why-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      background: rgba(201, 168, 76, .12);
+      border: 1px solid rgba(201, 168, 76, .25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: var(--gold);
+      transition: var(--transition);
+    }
+
+    .why-card:hover .why-icon {
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--navy);
+      border-color: transparent;
+    }
+
+    .why-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .why-card p {
+      font-size: .83rem;
+      color: rgba(255, 255, 255, .5);
+      line-height: 1.7;
+    }
+
+    /* ─── REVIEWS ─── */
+    #reviews {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .reviews-header .section-sub {
+      margin: 0 auto;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .review-card {
+      background: var(--off-white);
+      border: 1px solid rgba(10, 22, 40, .07);
+      border-radius: 20px;
+      padding: 32px 28px;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .review-card:hover {
+      box-shadow: var(--shadow);
+      border-color: rgba(201, 168, 76, .3);
+      transform: translateY(-4px);
+    }
+
+    .review-card::before {
+      content: '"';
+      position: absolute;
+      top: 16px;
+      right: 22px;
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem;
+      color: rgba(201, 168, 76, .18);
+      line-height: 1;
+    }
+
+    .review-stars {
+      color: var(--gold);
+      margin-bottom: 14px;
+      font-size: .9rem;
+      letter-spacing: 2px;
+    }
+
+    .review-text {
+      font-size: .88rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 22px;
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid rgba(10, 22, 40, .07);
+      padding-top: 18px;
+    }
+
+    .reviewer-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .95rem;
+      color: var(--navy);
+      background: linear-gradient(135deg, var(--gold-pale), var(--gold-light));
+      flex-shrink: 0;
+    }
+
+    .reviewer-name {
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .reviewer-tag {
+      font-size: .75rem;
+      color: var(--text-muted);
+    }
+
+    .review-source {
+      margin-left: auto;
+      font-size: .72rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .review-source i {
+      color: #4285F4;
+    }
+
+    /* Overall rating bar */
+    .rating-summary {
+      background: var(--navy);
+      border-radius: 20px;
+      padding: 36px 40px;
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 50px;
+    }
+
+    .rs-big {
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .rs-big .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .rs-big .stars {
+      color: var(--gold);
+      font-size: 1.1rem;
+      margin: 6px 0;
+    }
+
+    .rs-big p {
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .4);
+    }
+
+    .rs-bars {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .rs-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .rs-bar-row span:first-child {
+      font-size: .78rem;
+      color: rgba(255, 255, 255, .55);
+      width: 40px;
+      text-align: right;
+    }
+
+    .rs-bar-track {
+      flex: 1;
+      height: 6px;
+      background: rgba(255, 255, 255, .1);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .rs-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      border-radius: 3px;
+      transition: width 1s ease;
+    }
+
+    .rs-bar-row span:last-child {
+      font-size: .75rem;
+      color: rgba(255, 255, 255, .35);
+      width: 30px;
+    }
+
+    .rs-divider {
+      width: 1px;
+      background: rgba(255, 255, 255, .1);
+      align-self: stretch;
+    }
+
+    .rs-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .rs-hl {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .85rem;
+      color: rgba(255, 255, 255, .65);
+    }
+
+    .rs-hl i {
+      color: var(--gold);
+      font-size: .8rem;
+    }
+
+    /* ─── CONTACT ─── */
+    #contact {
+      padding: 100px 0;
+      background: var(--off-white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .contact-info {}
+
+    .contact-card {
+      background: var(--white);
+      border: 1px solid rgba(10, 22, 40, .08);
+      border-radius: 20px;
+      padding: 36px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .04);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(10, 22, 40, .06);
+    }
+
+    .contact-item:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+
+    .ci-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--navy), var(--navy-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    .ci-label {
+      font-size: .75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 4px;
+    }
+
+    .ci-value {
+      font-size: .92rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .ci-value a {
+      color: var(--navy-light);
+    }
+
+    .ci-value a:hover {
+      color: var(--gold);
+    }
+
+    .availability-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, .1);
+      border: 1px solid rgba(16, 185, 129, .3);
+      color: #059669;
+      font-size: .8rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-top: 16px;
+    }
+
+    .availability-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      animation: pulse-green 2s infinite;
+    }
+
+    @keyframes pulse-green {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, .4);
+      }
+
+      50% {
+        box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+      }
+    }
+
+    .map-wrap {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(10, 22, 40, .08);
+    }
+
+    .map-wrap iframe {
+      display: block;
+      width: 100%;
+      height: 420px;
+      border: 0;
+    }
+
+    .map-caption {
+      background: var(--white);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .map-caption i {
+      color: var(--gold);
+    }
+
+    .map-caption span {
+      font-size: .82rem;
+      color: var(--text-muted);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid rgba(255, 255, 255, .06);
+      padding: 60px 0 30px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+      margin-bottom: 30px;
+    }
+
+    .footer-brand p {
+      font-size: .85rem;
+      color: rgba(255, 255, 255, .45);
+      line-height: 1.8;
+      margin-top: 14px;
+      margin-bottom: 20px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer-social {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .07);
+      border: 1px solid rgba(255, 255, 255, .1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, .5);
+      font-size: .85rem;
+      transition: var(--transition);
+    }
+
+    .footer-social:hover {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+
+    .footer-col h4 {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .footer-col a {
+      display: block;
+      font-size: .82rem;
+      color: rgba(255, 255, 255, .45);
+      padding: 5px 0;
+      transition: color var(--transition);
+    }
+
+    .footer-col a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: .78rem;
+      color: rgba(255, 255, 255, .25);
+    }
+
+    .footer-bottom span {
+      color: var(--gold-light);
+    }
+
+    /* ─── WHATSAPP FLOAT ─── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 500;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: var(--white);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, .45);
+      transition: var(--transition);
+      animation: wa-bob 3s ease-in-out infinite;
+    }
+
+    .wa-float:hover {
+      transform: scale(1.12) translateY(-3px);
+      box-shadow: 0 14px 40px rgba(37, 211, 102, .55);
+    }
+
+    @keyframes wa-bob {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-6px);
+      }
+    }
+
+    .wa-float:hover {
+      animation: none;
+    }
+
+    .wa-tooltip {
+      position: absolute;
+      right: 68px;
+      white-space: nowrap;
+      background: var(--white);
+      color: var(--navy);
+      font-size: .78rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, .12);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s;
+    }
+
+    .wa-float:hover .wa-tooltip {
+      opacity: 1;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width:1024px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 420px;
+        margin: 0 auto;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-img-wrap {
+        display: none;
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rating-summary {
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+
+      .rs-divider {
+        display: none;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width:768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero-content {
+        padding: 90px 24px 50px;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .specialty-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rating-summary {
+        padding: 28px 24px;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width:480px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hc-stats {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <div class="nav-logo-icon">DA</div>
+        <div class="nav-logo-text">
+          <strong>Dr. Azhar Alam</strong>
+          <span>Bariatric & Laparoscopic Surgeon</span>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#why">Why Choose</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+923320761997" class="nav-cta"><i class="fa fa-phone"></i> Book Now</a>
+      </div>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="toggleMenu()"><i class="fa fa-user-md"
+        style="margin-right:10px;color:var(--gold)"></i>About</a>
+    <a href="#why" onclick="toggleMenu()"><i class="fa fa-star" style="margin-right:10px;color:var(--gold)"></i>Why
+      Choose</a>
+    <a href="#reviews" onclick="toggleMenu()"><i class="fa fa-comments"
+        style="margin-right:10px;color:var(--gold)"></i>Reviews</a>
+    <a href="#contact" onclick="toggleMenu()"><i class="fa fa-map-marker-alt"
+        style="margin-right:10px;color:var(--gold)"></i>Contact</a>
+    <a href="tel:+923320761997" style="color:var(--gold-light);font-weight:600;margin-top:10px;"><i class="fa fa-phone"
+        style="margin-right:10px;"></i>Call Now: +92 332 0761997</a>
+  </div>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-grid-lines"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-badge reveal">
+          <i class="fa fa-certificate"></i>
+          Board-Certified Specialist
+        </div>
+        <h1 class="hero-name reveal delay-1">
+          Dr. <span>Azhar</span> Alam
+        </h1>
+        <p class="hero-title reveal delay-2">Bariatric & Laparoscopic Surgeon — Lahore, Pakistan</p>
+        <p class="hero-tagline-en reveal delay-3">
+          "Surgery Without Cuts — Powered by Camera, Laser & Ultrasound."
+        </p>
+        <p class="hero-tagline-ur urdu reveal delay-3">
+          کیمرے، لیزر، اور الٹراساؤنڈ کی مدد سے بغیر کٹ اور بغیر چیرے کے جدید طریقوں سے آپریشن
+        </p>
+        <div class="hero-rating reveal delay-4">
+          <div class="hero-stars">★★★★★</div>
+          <div class="hero-rating-text">
+            <strong>4.9</strong> / 5.0 &nbsp;·&nbsp; <strong>221</strong> Patient Reviews
+          </div>
+        </div>
+        <div class="hero-btns reveal delay-5">
+          <a href="tel:+923320761997" class="btn btn-gold">
+            <i class="fa fa-phone-alt"></i> Book Appointment
+          </a>
+          <a href="https://wa.me/923320761997" class="btn btn-outline" target="_blank">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right reveal delay-3">
+        <div class="hero-card">
+          <div class="hc-avatar">A</div>
+          <div class="hc-name">Dr. Azhar Alam</div>
+          <div class="hc-spec">Bariatric · Laparoscopic · Laser Surgeon</div>
+          <div class="hc-stats">
+            <div class="hc-stat">
+              <strong>10+</strong>
+              <span>Years Exp.</span>
+            </div>
+            <div class="hc-stat">
+              <strong>1500+</strong>
+              <span>Surgeries</span>
+            </div>
+            <div class="hc-stat">
+              <strong>24/7</strong>
+              <span>Available</span>
+            </div>
+          </div>
+          <div class="hc-tags">
+            <span class="hc-tag"><i class="fa fa-check-circle"
+                style="color:var(--gold);margin-right:4px;font-size:.65rem;"></i>Bariatric</span>
+            <span class="hc-tag"><i class="fa fa-check-circle"
+                style="color:var(--gold);margin-right:4px;font-size:.65rem;"></i>Laparoscopic</span>
+            <span class="hc-tag"><i class="fa fa-check-circle"
+                style="color:var(--gold);margin-right:4px;font-size:.65rem;"></i>Laser Piles</span>
+            <span class="hc-tag"><i class="fa fa-check-circle"
+                style="color:var(--gold);margin-right:4px;font-size:.65rem;"></i>Gallbladder</span>
+            <span class="hc-tag"><i class="fa fa-check-circle"
+                style="color:var(--gold);margin-right:4px;font-size:.65rem;"></i>Hernia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap reveal-left">
+          <div class="about-img-bg" style="overflow: hidden; border-radius: 20px;">
+            <img src="assets/image1.png" alt="Dr. Azhar Alam"
+              style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          </div>
+          <div class="about-badge-float">
+            <div class="abf-icon"><i class="fa fa-award"></i></div>
+            <div class="abf-text">
+              <strong>Top Rated</strong>
+              <span>Lahore's Trusted Surgeon</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text reveal-right">
+          <div class="section-label">About the Doctor</div>
+          <h2 class="section-title">Expert Care, Minimal Intervention</h2>
+          <p class="section-sub">
+            Dr. Azhar Alam is a distinguished Bariatric and Laparoscopic Surgeon practicing at Rasheed Hospital, DHA
+            Lahore. With over a decade of surgical experience, he specializes in advanced minimally invasive procedures
+            — harnessing cutting-edge camera, laser, and ultrasound technologies to deliver surgeries with little to no
+            incisions, faster recovery, and outstanding patient outcomes.
+          </p>
+
+          <div class="specialty-grid">
+            <div class="specialty-card reveal delay-1">
+              <div class="sc-icon"><i class="fa fa-weight"></i></div>
+              <div class="sc-text">
+                <strong>Bariatric Surgery</strong>
+                <span>Weight loss procedures</span>
+              </div>
+            </div>
+            <div class="specialty-card reveal delay-2">
+              <div class="sc-icon"><i class="fa fa-video"></i></div>
+              <div class="sc-text">
+                <strong>Laparoscopic Surgery</strong>
+                <span>Keyhole techniques</span>
+              </div>
+            </div>
+            <div class="specialty-card reveal delay-3">
+              <div class="sc-icon"><i class="fa fa-burn"></i></div>
+              <div class="sc-text">
+                <strong>Laser Piles Surgery</strong>
+                <span>Pain-free hemorrhoid care</span>
+              </div>
+            </div>
+            <div class="specialty-card reveal delay-4">
+              <div class="sc-icon"><i class="fa fa-circle"></i></div>
+              <div class="sc-text">
+                <strong>Gallbladder Surgery</strong>
+                <span>Cholecystectomy specialist</span>
+              </div>
+            </div>
+            <div class="specialty-card reveal delay-5">
+              <div class="sc-icon"><i class="fa fa-band-aid"></i></div>
+              <div class="sc-text">
+                <strong>Hernia Surgery</strong>
+                <span>All types of hernia repair</span>
+              </div>
+            </div>
+            <div class="specialty-card reveal delay-5">
+              <div class="sc-icon"><i class="fa fa-broadcast-tower"></i></div>
+              <div class="sc-text">
+                <strong>Ultrasound-Guided Procedures</strong>
+                <span>Precision imaging-guided care</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ WHY CHOOSE ═══════════════════════════════ -->
+  <section id="why">
+    <div class="container">
+      <div class="why-header">
+        <div class="section-label reveal"
+          style="color:var(--gold-light);background:rgba(201,168,76,.1);border-color:rgba(201,168,76,.3);">
+          Why Dr. Azhar Alam
+        </div>
+        <h2 class="section-title reveal delay-1">Your Surgery. Redefined.</h2>
+        <p class="section-sub reveal delay-2" style="color:rgba(255,255,255,.55); margin:0 auto;">
+          Combining decades of surgical mastery with the very latest medical technology for a safer, faster, and more
+          comfortable healing journey.
+        </p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal delay-1">
+          <div class="why-icon"><i class="fa fa-cut"></i></div>
+          <h3>No Cuts, No Scars</h3>
+          <p>Minimally invasive techniques mean no large incisions, dramatically less pain, and a faster return to daily
+            life.</p>
+        </div>
+        <div class="why-card reveal delay-2">
+          <div class="why-icon"><i class="fa fa-microchip"></i></div>
+          <h3>Latest Technology</h3>
+          <p>Precision Laser, HD Camera, and advanced Ultrasound-guided procedures for the most accurate, safe outcomes.
+          </p>
+        </div>
+        <div class="why-card reveal delay-3">
+          <div class="why-icon"><i class="fa fa-clock"></i></div>
+          <h3>24 / 7 Availability</h3>
+          <p>Round-the-clock availability at Rasheed Hospital ensures you receive care exactly when you need it most.
+          </p>
+        </div>
+        <div class="why-card reveal delay-4">
+          <div class="why-icon"><i class="fa fa-heart"></i></div>
+          <h3>Compassionate Care</h3>
+          <p>Highly experienced and genuinely caring — Dr. Azhar Alam treats every patient like a member of his own
+            family.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ REVIEWS ═══════════════════════════════ -->
+  <section id="reviews">
+    <div class="container">
+      <div class="reviews-header">
+        <div class="section-label reveal">Patient Reviews</div>
+        <h2 class="section-title reveal delay-1">What Our Patients Say</h2>
+        <p class="section-sub reveal delay-2">Real stories from real patients who trusted Dr. Azhar Alam with their
+          health and wellbeing.</p>
+      </div>
+
+      <!-- Rating Summary -->
+      <div class="rating-summary reveal">
+        <div class="rs-big">
+          <div class="num">4.9</div>
+          <div class="stars">★★★★★</div>
+          <p>221 Google Reviews</p>
+        </div>
+        <div class="rs-divider"></div>
+        <div class="rs-bars">
+          <div class="rs-bar-row">
+            <span>5 ★</span>
+            <div class="rs-bar-track">
+              <div class="rs-bar-fill" style="width:93%"></div>
+            </div>
+            <span>93%</span>
+          </div>
+          <div class="rs-bar-row">
+            <span>4 ★</span>
+            <div class="rs-bar-track">
+              <div class="rs-bar-fill" style="width:5%"></div>
+            </div>
+            <span>5%</span>
+          </div>
+          <div class="rs-bar-row">
+            <span>3 ★</span>
+            <div class="rs-bar-track">
+              <div class="rs-bar-fill" style="width:1%"></div>
+            </div>
+            <span>1%</span>
+          </div>
+          <div class="rs-bar-row">
+            <span>2 ★</span>
+            <div class="rs-bar-track">
+              <div class="rs-bar-fill" style="width:0.5%"></div>
+            </div>
+            <span>0%</span>
+          </div>
+          <div class="rs-bar-row">
+            <span>1 ★</span>
+            <div class="rs-bar-track">
+              <div class="rs-bar-fill" style="width:0.5%"></div>
+            </div>
+            <span>0%</span>
+          </div>
+        </div>
+        <div class="rs-divider"></div>
+        <div class="rs-highlights">
+          <div class="rs-hl"><i class="fa fa-check-circle"></i> Highly recommended by patients</div>
+          <div class="rs-hl"><i class="fa fa-check-circle"></i> Exceptional post-operative care</div>
+          <div class="rs-hl"><i class="fa fa-check-circle"></i> Professional & compassionate</div>
+          <div class="rs-hl"><i class="fa fa-check-circle"></i> Minimal pain & quick recovery</div>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card reveal delay-1">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "Dr. Azhar Alam's expertise as a General and Laparoscopic Surgeon is truly unmatched. From the very first
+            consultation to full recovery, every step was handled with the utmost professionalism and care. Highly
+            recommended!"
+          </p>
+          <div class="review-author">
+            <div class="reviewer-avatar">MU</div>
+            <div>
+              <div class="reviewer-name">Muhammad Usman</div>
+              <div class="reviewer-tag">Laparoscopic Surgery Patient</div>
+            </div>
+            <div class="review-source"><i class="fab fa-google"></i> Google</div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card reveal delay-2">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "Truly thankful for taking such good care of my mother during her surgery. Dr. Azhar Alam and his team were
+            incredibly kind, attentive, and reassuring throughout the entire process. May God bless him always."
+          </p>
+          <div class="review-author">
+            <div class="reviewer-avatar">MK</div>
+            <div>
+              <div class="reviewer-name">Mahi Kazmi</div>
+              <div class="reviewer-tag">Family of a Surgical Patient</div>
+            </div>
+            <div class="review-source"><i class="fab fa-google"></i> Google</div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card reveal delay-3">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "Best piles laser surgeon in town! Great experience, very caring and professional. The procedure was
+            painless and my recovery was so much faster than I expected. Cannot recommend enough. Thank you Doctor!"
+          </p>
+          <div class="review-author">
+            <div class="reviewer-avatar">AR</div>
+            <div>
+              <div class="reviewer-name">Awais Rehman</div>
+              <div class="reviewer-tag">Laser Piles Surgery Patient</div>
+            </div>
+            <div class="review-source"><i class="fab fa-google"></i> Google</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label reveal">Get In Touch</div>
+      <h2 class="section-title reveal delay-1">Visit Us at Rasheed Hospital</h2>
+      <p class="section-sub reveal delay-2" style="margin-bottom:50px;">
+        Conveniently located in DHA Phase 1, Lahore — open 24 hours for all your surgical needs.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-card">
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fa fa-map-marker-alt"></i></div>
+              <div>
+                <div class="ci-label">Hospital Address</div>
+                <div class="ci-value">Rasheed Hospital, D.H.A. Main Blvd,<br>DHA Phase 1, Lahore, 54000, Pakistan</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fa fa-phone-alt"></i></div>
+              <div>
+                <div class="ci-label">Phone / WhatsApp</div>
+                <div class="ci-value"><a href="tel:+923320761997">+92 332 0761997</a></div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fa fa-clock"></i></div>
+              <div>
+                <div class="ci-label">Availability</div>
+                <div class="ci-value">Open 24 Hours · 7 Days a Week</div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="ci-icon"><i class="fa fa-globe"></i></div>
+              <div>
+                <div class="ci-label">Online Profile</div>
+                <div class="ci-value">
+                  <a href="https://business.google.com/dr-azhar-alam" target="_blank">
+                    business.google.com/dr-azhar-alam
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="availability-badge">Open 24 Hours — Ready to Help</div>
+
+          <div style="margin-top:24px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="tel:+923320761997" class="btn btn-gold"
+              style="background:linear-gradient(135deg,var(--navy),var(--navy-light));color:var(--white);border-color:var(--navy-light);">
+              <i class="fa fa-phone"></i> Call Now
+            </a>
+            <a href="https://wa.me/923320761997" class="btn btn-gold" target="_blank">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.406!2d74.3745!3d31.4813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904e86dbe0d23%3A0x8d82c6cd0c3ace5c!2sRasheed%20Hospital!5e0!3m2!1sen!2spk!4v1"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Rasheed Hospital DHA Lahore">
+            </iframe>
+            <div class="map-caption">
+              <i class="fa fa-map-pin"></i>
+              <span>Rasheed Hospital, DHA Phase 1 Main Boulevard, Lahore, Pakistan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo" style="margin-bottom:0">
+            <div class="nav-logo-icon">DA</div>
+            <div class="nav-logo-text">
+              <strong>Dr. Azhar Alam</strong>
+              <span>Bariatric & Laparoscopic Surgeon</span>
+            </div>
+          </div>
+          <p>Providing world-class, minimally invasive surgical care at Rasheed Hospital, Lahore. Trusted by hundreds of
+            patients for precision, compassion, and excellence.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/923320761997" class="footer-social" target="_blank"><i
+                class="fab fa-whatsapp"></i></a>
+            <a href="tel:+923320761997" class="footer-social"><i class="fa fa-phone"></i></a>
+            <a href="https://business.google.com/dr-azhar-alam" class="footer-social" target="_blank"><i
+                class="fab fa-google"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#about">About Dr. Azhar Alam</a>
+          <a href="#about">Specialties</a>
+          <a href="#why">Why Choose Us</a>
+          <a href="#reviews">Patient Reviews</a>
+          <a href="#contact">Contact & Location</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Specialties</h4>
+          <a href="#about">Bariatric Surgery</a>
+          <a href="#about">Laparoscopic Surgery</a>
+          <a href="#about">Laser Piles Surgery</a>
+          <a href="#about">Gallbladder Surgery</a>
+          <a href="#about">Hernia Surgery</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 <span>Dr. Azhar Alam</span> · Bariatric & Laparoscopic Surgeon · Rasheed Hospital, DHA Lahore,
+          Pakistan. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════ WHATSAPP FLOAT ═══════════════════════════════ -->
+  <a href="https://wa.me/923320761997" class="wa-float" target="_blank" title="WhatsApp Dr. Azhar Alam">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <script>
+    /* ── Navbar scroll ── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    /* ── Hamburger ── */
+    function toggleMenu() {
+      document.getElementById('hamburger').classList.toggle('open');
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    /* ── Scroll Reveal ── */
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => observer.observe(el));
+
+    /* ── Smooth close mobile menu on link click ── */
+    document.querySelectorAll('.mobile-menu a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.getElementById('hamburger').classList.remove('open');
+        document.getElementById('mobileMenu').classList.remove('open');
+      });
+    });
+
+    /* ── Rating bar animation ── */
+    const ratingObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.rs-bar-fill').forEach(bar => {
+            const target = bar.style.width;
+            bar.style.width = '0';
+            setTimeout(() => bar.style.width = target, 200);
+          });
+          ratingObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    const ratingSummary = document.querySelector('.rating-summary');
+    if (ratingSummary) ratingObs.observe(ratingSummary);
+  </script>
+</body>
+
+</html>
